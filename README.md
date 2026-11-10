@@ -1,5 +1,14 @@
 # Vector Vortex
 
+## Maintainer documentation (2026 audit)
+
+- [Architecture and development](docs/DEVELOPMENT.md) — source and local workflow.
+- [Build/QA checklist](docs/QA_CHECKLIST.md) — repeatable checks and CI limits.
+- [Release and signing](docs/RELEASE.md) — official assets, Apple notarization and Fun City installation.
+- [Licensing and provenance](docs/LICENSING.md) — MIT scope, third-party rights and clearance tasks.
+- [Third-party notices](THIRD_PARTY_NOTICES.md) — observed stack, inventory and review status.
+
+
 An original, Tempest-inspired neon tube shooter for macOS, built in SwiftUI and SpriteKit. A standalone cabinet for [Fun City](https://github.com/peter-dietrich/fun-city). No external frameworks, artwork, game assets, telemetry uploads, or server dependency.
 
 ## Play
@@ -36,7 +45,7 @@ No third-party Tempest logos, code, or original game assets are used.
 xcodebuild -project VectorVortex.xcodeproj -scheme VectorVortex -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO build
 ```
 
-The GitHub Actions workflow builds on macOS whenever code is pushed. The macOS build and actual gameplay have not been verified locally from this environment until CI completes.
+The GitHub Actions workflow builds on macOS whenever code is pushed. The macOS GitHub Actions build succeeded for the audited main commit (2026-11-09). Interactive gameplay testing on a Mac remains outstanding.
 
 ## Fun City
 
