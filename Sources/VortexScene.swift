@@ -463,8 +463,8 @@ final class VortexScene: SKScene {
         let x = max(0, min(1.12, depth))
         let r = radius * CGFloat(0.145 + 0.855 * pow(x, 1.20))
         let factor = 1 + (spokeFactor(index) - 1) * CGFloat(x)
-        return CGPoint(x: center.x + cos(angle) * r * factor,
-                       y: center.y + sin(angle) * r * factor)
+        return CGPoint(x: center.x + CGFloat(cos(angle)) * r * factor,
+                       y: center.y + CGFloat(sin(angle)) * r * factor)
     }
 
     private func point(lane index: Int, depth: Double) -> CGPoint {
