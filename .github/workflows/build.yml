@@ -1,0 +1,11 @@
+name: macOS build
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Vector Vortex
+        run: xcodebuild -project VectorVortex.xcodeproj -scheme VectorVortex -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO build
