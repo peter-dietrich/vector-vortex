@@ -11,7 +11,10 @@ struct VectorVortexApp: App {
                 .preferredColorScheme(.dark)
         }
         .defaultSize(width: 1250, height: 805)
-        .commands { CommandGroup(replacing: .newItem) {} GameHelpCommands() }
+        .commands {
+            CommandGroup(replacing: .newItem) {}
+            GameHelpCommands()
+        }
     }
 }
 
