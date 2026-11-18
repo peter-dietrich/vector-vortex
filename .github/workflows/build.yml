@@ -9,3 +9,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build Vector Vortex
         run: xcodebuild -project VectorVortex.xcodeproj -scheme VectorVortex -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO build
+      - name: Verify bundled macOS app icon
+        run: bash scripts/check-app-branding.sh VectorVortex
