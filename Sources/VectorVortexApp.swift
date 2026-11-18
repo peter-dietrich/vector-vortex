@@ -4,6 +4,7 @@ import SwiftUI
 
 @main
 struct VectorVortexApp: App {
+    @NSApplicationDelegateAdaptor(ArcadeIconAppDelegate.self) private var iconDelegate
     var body: some Scene {
         WindowGroup("Vector Vortex") {
             VortexWindow()
